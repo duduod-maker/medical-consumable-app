@@ -1,0 +1,41 @@
+@media print {
+  /* Hide elements not relevant for printing */
+  header,
+  footer,
+  nav,
+  aside,
+  form,
+  .no-print, /* A class to explicitly mark elements not to be printed */
+  button {
+    display: none !important;
+  }
+
+  /* Show only the main content area */
+  body > div { /* Assuming the main content is wrapped in a div directly under body */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  /* Ensure tables are readable */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    border: 1px solid #ccc;
+    padding: 4px; /* Reduced padding for print */
+    text-align: left;
+    word-break: break-word; /* Allow long words to break */
+  }
+
+  /* Adjust font sizes for print */
+  body {
+    font-size: 9pt;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 12pt;
+  }
+}
