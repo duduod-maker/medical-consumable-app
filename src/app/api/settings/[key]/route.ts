@@ -47,9 +47,10 @@ export async function POST(request: Request, { params: rawParams }: { params: Pa
     const body = await request.json()
     const { value } = body
 
-    const updatedSetting = await prisma.setting.update({
+    const updatedSetting = await prisma.setting.upsert({
       where: { key: params.key },
-      data: { value },
+      update: { value },
+      create: { key: params.key, value },
     })
 
     return NextResponse.json(updatedSetting)
