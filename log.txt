@@ -1,0 +1,34 @@
+-- inner error --
+Error: Cannot find module 'tailwindcss'
+Require stack:
+- /opt/render/project/src/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js
+- /opt/render/project/src/node_modules/next/dist/build/webpack/config/blocks/css/index.js
+- /opt/render/project/src/node_modules/next/dist/build/webpack/config/index.js
+- /opt/render/project/src/node_modules/next/dist/build/webpack-config.js
+- /opt/render/project/src/node_modules/next/dist/build/webpack-build/impl.js
+- /opt/render/project/src/node_modules/next/dist/compiled/jest-worker/processChild.js
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1401:15)
+    at /opt/render/project/src/node_modules/next/dist/server/require-hook.js:57:36
+    at Function.resolve (node:internal/modules/helpers:145:19)
+    at loadPlugin (/opt/render/project/src/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:53:32)
+    at /opt/render/project/src/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:185:56
+    at Array.map (<anonymous>)
+    at getPostCssPlugins (/opt/render/project/src/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:185:47)
+    at async /opt/render/project/src/node_modules/next/dist/build/webpack/config/blocks/css/index.js:125:36
+    at async /opt/render/project/src/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js:52:40
+    at async Span.traceAsyncFn (/opt/render/project/src/node_modules/next/dist/trace/trace.js:157:20)
+    at Object.<anonymous> (/opt/render/project/src/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!/opt/render/project/src/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!/opt/render/project/src/src/app/globals.css:1:7)
+    at /opt/render/project/src/node_modules/next/dist/compiled/webpack/bundle5.js:29:962717
+    at Hook.eval [as call] (eval at create (/opt/render/project/src/node_modules/next/dist/compiled/webpack/bundle5.js:14:9002), <anonymous>:7:1)
+    at Hook.CALL_DELEGATE [as _call] (/opt/render/project/src/node_modules/next/dist/compiled/webpack/bundle5.js:14:6272)
+    at /opt/render/project/src/node_modules/next/dist/compiled/webpack/bundle5.js:29:131565
+    at tryRunOrWebpackError (/opt/render/project/src/node_modules/next/dist/compiled/webpack/bundle5.js:29:316073)
+    at __webpack_require_module__ (/opt/render/project/src/node_modules/next/dist/compiled/webpack/bundle5.js:29:131532)
+    at __nested_webpack_require_161494__ (/opt/render/project/src/node_modules/next/dist/compiled/webpack/bundle5.js:29:130967)
+    at /opt/render/project/src/node_modules/next/dist/compiled/webpack/bundle5.js:29:131824
+    at symbolIterator (/opt/render/project/src/node_modules/next/dist/compiled/neo-async/async.js:1:14444)
+Generated code for /opt/render/project/src/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!/opt/render/project/src/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!/opt/render/project/src/src/app/globals.css
+Import trace for requested module:
+./src/app/globals.css
+> Build failed because of webpack errors
+==> Build failed 😞
