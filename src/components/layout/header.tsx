@@ -48,6 +48,12 @@ export function Header({ className }: HeaderProps) {
                   Administration
                 </Link>
               )}
+              <Link
+                href="/help"
+                className={getLinkClasses("/help")}
+              >
+                Aide
+              </Link>
             </nav>
           </div>
           <div className="flex items-center">
