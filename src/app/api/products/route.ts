@@ -30,9 +30,7 @@ export async function GET(request: Request) {
     // Si l'utilisateur n'est pas admin, filtrer pour ne montrer que les produits qui lui sont affectés
     if (!isAdmin(session)) {
       where.assignedUsers = {
-        some: {
-          userId: session.user.id
-        }
+        userId: session.user.id
       }
     }
 

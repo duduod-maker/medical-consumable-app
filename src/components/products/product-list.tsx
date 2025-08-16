@@ -32,7 +32,7 @@ interface Product {
   price: number;
   categoryId: string;
   category: Category;
-  assignedUsers: UserProduct[];
+  assignedUsers: UserProduct | null;
 }
 
 // Custom hook for debouncing

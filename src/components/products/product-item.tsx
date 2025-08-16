@@ -31,7 +31,7 @@ interface Product {
   price: number;
   categoryId: string;
   category: Category;
-  assignedUsers: UserProduct[];
+  assignedUsers: UserProduct | null;
 }
 
 interface ProductItemProps {
@@ -136,11 +136,11 @@ export function ProductItem({ product, users, onEdit, onDuplicate, onDelete, onR
         <td className="px-4 py-4 text-sm text-gray-500 w-48">
           <div className="space-y-2">
             {/* Utilisateur affecté (un seul) */}
-            {product.assignedUsers && product.assignedUsers.length > 0 ? (
+            {product.assignedUsers ? (
               <div className="flex items-center justify-between bg-gray-100 px-2 py-1 rounded text-xs">
-                <span>{product.assignedUsers[0].user.name || product.assignedUsers[0].user.email}</span>
+                <span>{product.assignedUsers.user.name || product.assignedUsers.user.email}</span>
                 <button
-                  onClick={() => handleUnassignUser(product.assignedUsers[0].user.id)}
+                  onClick={() => handleUnassignUser(product.assignedUsers.user.id)}
                   className="text-red-600 hover:text-red-800 ml-2"
                 >
                   ×
